@@ -5,14 +5,17 @@
 Nele temos o uso do nest.js, typescript, prisma, react ( na parte browser ) e react native na parte mobile. 
 Também usamos bibliotecas de UUID e QRCODE. 
 
-Nesta versão, apesar do backend já está funcioando, os módulos ainda não estão interligados. De modo 
-que as consulta no frontend ainda são em memória. 
+__**Nesta versão, apesar do backend já está funcioando, os módulos ainda não estão interligados. De modo 
+que as consulta no frontend ainda são em memória.**__ 
 
 O projeto é um monolítico para fins didáticos. 
 Veja que quando roda o projeto, ele já sobe: 
 frontend: porta 3000
+
 backend: porta 4000
+
 packages: ( onde está o core nosso )
+
 mobile: react native. Neste caso precisa do studio android instalado. 
 
 
@@ -95,7 +98,8 @@ URLS DO PROJETO:
   cd /home/gilberto/APRENDIZADO/cod3r/convit3-digital/apps/backend
   npx primsa init --datasource-provider sqlite
 ```    
-### DICA: Instale a extensão PRISMA da prisma.io no VSCODE e sqliteview
+### DICA: sqliteview
+ Instale a extensão PRISMA da prisma.io no VSCODE e sqliteview
 
 ### Onde fica a definição das tabelas no prisma?
 
