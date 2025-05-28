@@ -5,8 +5,9 @@
 Nele temos o uso do nest.js, typescript, prisma, react ( na parte browser ) e react native na parte mobile. 
 Também usamos bibliotecas de UUID e QRCODE. 
 
-__**Nesta versão, apesar do backend já está funcioando, os módulos ainda não estão interligados. De modo 
-que as consulta no frontend ainda são em memória.**__ 
+__**Nesta versão vamos integrar o frontend com o backend.
+
+As consultas no frontend a partir desta branche devem consultar o bancod de dados..**__ 
 
 O projeto é um monolítico para fins didáticos. 
 Veja que quando roda o projeto, ele já sobe: 
