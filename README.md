@@ -66,7 +66,7 @@ Uma fez feito no frontend e backend, não esqueça de rodar: npm i no raiz.
 
 URLS DO PROJETO: 
 
-  Abre no menu principal:
+  Abre no menu principal - FRONTEND:
   http://localhost:3000
 
   http://localhost:3000/evento
@@ -85,6 +85,9 @@ URLS DO PROJETO:
 
   mais detalhes veja no arquivo controller da pasta backend. 
 
+## removi o mobile para rodar: 
+
+    "apps:mobile": "cd apps/mobile && npm run android",
 ## CONFIGURANDO O PRISMA
 ```bash
    node --version 
