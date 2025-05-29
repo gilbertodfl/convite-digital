@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { ProvedorMensagens } from "@/data/contexts/ContextoMensagens";
 
 const fonte = Inter({
   subsets: ["latin"],
@@ -18,7 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={fonte.className}>{children}</body>
+      <body className={fonte.className}>
+        <ProvedorMensagens>
+          {children}
+        </ProvedorMensagens>
+      </body>
     </html>
   );
 }
