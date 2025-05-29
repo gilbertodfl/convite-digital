@@ -1,5 +1,6 @@
 const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:4000';
 
+
 export async function acessarEvento(id: string, senha: string) {
   const response = await fetch(`${API_URL}/eventos/acessar`, {
     method: 'POST',
@@ -12,6 +13,22 @@ export async function acessarEvento(id: string, senha: string) {
   if (!response.ok) {
     const error = await response.json();
     throw new Error(error.messagem ?? 'Erro ao acessar evento');
+  }
+
+  return response.json();
+} 
+///////////////////////////  ACESSAR TODOS EVENTOS ///////////////////////////
+export async function acessarEventos() {
+  const response = await fetch(`${API_URL}/eventos`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.messagem ?? 'Erro ao acessar todos eventos');
   }
 
   return response.json();

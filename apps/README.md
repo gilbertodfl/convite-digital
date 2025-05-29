@@ -56,7 +56,10 @@ Uma fez feito no frontend e backend, não esqueça de rodar: npm i no raiz.
 URLS DO PROJETO: 
 
   Abre no menu principal:
+
   http://localhost:3000
+    
+
 
   http://localhost:3000/evento
 

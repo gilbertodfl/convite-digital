@@ -182,7 +182,7 @@ const eventos: Evento[] = [
   },
   {
     id: "53ae44ec-30fb-4e5a-9b0b-a9fbedd8e3c1",
-    alias: "inauguracao-loja-estrela",
+    alias: "XXXinauguracao-loja-estrela",
     senha: "estrela2024",
     nome: "Inauguração da Loja Estrela",
     data: new Date("2024-12-10T09:00:00Z"),

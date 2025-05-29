@@ -67,6 +67,7 @@ export default function PaginaAdminEvento(props: any) {
           presentes={presentes}
           ausentes={ausentes}
           totalGeral={totalGeral}
+          onAtualizar={carregarEvento}
         />
       ) : (
         <FormSenhaEvento />
