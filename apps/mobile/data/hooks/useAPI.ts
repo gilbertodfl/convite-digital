@@ -25,7 +25,7 @@ export default function useAPI() {
     return extrairDados(resposta);
   }, []);
 
-  function extrairDados(reposta: Response) {
+  async function extrairDados(reposta: Response) {
     let conteudo: any;
 
     try {

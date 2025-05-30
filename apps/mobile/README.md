@@ -90,3 +90,15 @@ Se você usar ferramentas como Turbo ou Nx para gerenciar o monorepo, verifique 
 Defina a variável no arquivo .env conforme abaixo: 
 EXPO_USE_METRO_WORKSPACE_ROOT=1
 
+## icones react
+
+https://www.npmjs.com/package/@tabler/icons-react
+
+cd apps/frontend
+
+Como estamos num momento de transição para a 19, use o force. 
+npm i @tabler/icons-react --force
+
+yarn
+
+npm dev start 
