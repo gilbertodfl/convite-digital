@@ -2,10 +2,12 @@
 import DashboardEvento from "@/components/evento/DashboardEvento";
 import FormSenhaEvento from "@/components/evento/FormSenhaEvento";
 import { Convidado, Evento } from "core";
-import { use, useEffect, useState } from "react";
+import { use, useCallback, useEffect, useState } from "react";
 import { acessarEvento } from "@/services/api";
+import useAPI from "@/data/hooks/useAPI";
 
 export default function PaginaAdminEvento(props: any) {
+  const  { httpPost } = useAPI()
   const params: any = use(props.params);
 
   const id = params.todos[0];
@@ -38,9 +40,19 @@ export default function PaginaAdminEvento(props: any) {
     }
   }
 
+  const obterEvento = useCallback(async () => {
+    if (!id || !senha) return;
+    const evento = await httpPost("/eventos/acessar", { id, senha });
+    setEvento(evento);
+  }, [httpPost, id, senha]);
+
   useEffect(() => {
     carregarEvento();
   }, [id, senha]);
+
+  // useEffect( ()=> {
+  //   obterEvento()
+  // }, [obterEvento])
 
   if (carregando) {
     return (
@@ -54,7 +66,7 @@ export default function PaginaAdminEvento(props: any) {
     return (
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="text-xl text-red-500">{erro}</div>
-        <FormSenhaEvento />
+        <FormSenhaEvento   acessarEvento={obterEvento} senha={senha} setSenha={setSenha}/>
       </div>
     );
   }
@@ -70,7 +82,11 @@ export default function PaginaAdminEvento(props: any) {
           onAtualizar={carregarEvento}
         />
       ) : (
-        <FormSenhaEvento />
+        <FormSenhaEvento
+          acessarEvento={obterEvento}
+          senha={senha}
+          setSenha={setSenha}
+        />
       )}
     </div>
   );
